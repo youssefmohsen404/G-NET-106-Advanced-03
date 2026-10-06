@@ -53,40 +53,75 @@
 
             #endregion
             #region Exercise 3: Phone Book
-           /* Dictionary<string, string> phoneBook = new Dictionary<string, string>
+            /* Dictionary<string, string> phoneBook = new Dictionary<string, string>
+             {
+                 { "Ahmed"  ,"010025646" },
+                 { "youssef"  ,"010025647" },
+                 { "mohamed"  ,"010025648" },
+                 { "fares"  ,"010025649" },
+
+             };
+             phoneBook["yassin"] = "0102154815";
+             Helper.PrintCollection("phone book" , phoneBook );
+             Console.WriteLine();
+
+             try
+             {
+                 phoneBook.Add("Ahmed", "010025646");
+             }
+             catch (Exception ex) {
+                 Console.WriteLine($"error : {ex.Message}");
+             }
+             Console.WriteLine();
+             Console.WriteLine("is duplicte added:");
+
+            bool isAdded =  phoneBook.TryAdd("Ahmed", "010025646");
+             Console.WriteLine(isAdded);
+
+             bool isThere = phoneBook.ContainsKey("mariam");
+             Console.WriteLine();
+             Console.WriteLine($"is this contact there: {isThere}");
+             string search = phoneBook.GetValueOrDefault("yasser" , "not found");
+             Console.WriteLine(search);
+
+             Console.WriteLine();
+             Console.WriteLine("Keys: " + string.Join(", ", phoneBook.Keys));
+             Console.WriteLine("Values: " + string.Join(", ", phoneBook.Values));*/
+            #endregion
+            #region Exercise 4: Unique Email Validator
+
+       /*     HashSet<string> emails = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
             {
-                { "Ahmed"  ,"010025646" },
-                { "youssef"  ,"010025647" },
-                { "mohamed"  ,"010025648" },
-                { "fares"  ,"010025649" },
-                
             };
-            phoneBook["yassin"] = "0102154815";
-            Helper.PrintCollection("phone book" , phoneBook );
-            Console.WriteLine();
+            Console.WriteLine($"Add ahmed@test.com: {emails.Add("ahmed@test.com")}");
+            Console.WriteLine($"Add AHMED@test.com: {emails.Add("AHMED@test.com")}");
+            Console.WriteLine($"Add sara@test.com:  {emails.Add("sara@test.com")}");
+            Console.WriteLine($"Add Sara@Test.Com:  {emails.Add("Sara@Test.Com")}");
+            Helper.PrintCollection("emails" , emails );
+            int count =  emails.Count();
+            Console.WriteLine($"count :{count}");
+            // count equals 2 because there is no duplications in hash sets and w created a case sensitive hashset
+            // so ahmed is like AHMED so it is a duplicated item
 
-            try
-            {
-                phoneBook.Add("Ahmed", "010025646");
-            }
-            catch (Exception ex) {
-                Console.WriteLine($"error : {ex.Message}");
-            }
-            Console.WriteLine();
-            Console.WriteLine("is duplicte added:");
+            HashSet<int> setA = new HashSet<int> { 1, 2, 3, 4, 5 };
+            HashSet<int> setB = new HashSet<int> { 4, 5, 6, 7, 8 };
 
-           bool isAdded =  phoneBook.TryAdd("Ahmed", "010025646");
-            Console.WriteLine(isAdded);
+            HashSet<int> union = new HashSet<int>(setA);
+            union.UnionWith(setB);
+            Helper.PrintCollection("union" , union );
 
-            bool isThere = phoneBook.ContainsKey("mariam");
-            Console.WriteLine();
-            Console.WriteLine($"is this contact there: {isThere}");
-            string search = phoneBook.GetValueOrDefault("yasser" , "not found");
-            Console.WriteLine(search);
 
-            Console.WriteLine();
-            Console.WriteLine("Keys: " + string.Join(", ", phoneBook.Keys));
-            Console.WriteLine("Values: " + string.Join(", ", phoneBook.Values));*/
+            HashSet<int> intersect = new HashSet<int>(setA);
+            intersect.IntersectWith(setB);
+            Helper.PrintCollection("intersect" , intersect );
+
+
+            HashSet<int> except = new HashSet<int>(setA);
+            except.ExceptWith(setB);
+            Helper.PrintCollection("except" ,  except );
+
+            HashSet<int> small = new HashSet<int> { 1, 2 };
+            Console.WriteLine($"{{1,2}} is a subset of A: {small.IsSubsetOf(setA)}");*/
             #endregion
         }
     }
