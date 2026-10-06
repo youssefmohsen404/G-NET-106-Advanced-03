@@ -30,27 +30,63 @@
             #endregion
             #region Exercise 2: Leaderboard
 
-          /*  SortedDictionary<int, string> leaderBoard = new SortedDictionary<int, string>()
-            {
-                {500 ,"ahmed" },
-                {200,"sara" },
-                {800,"ali" },
-                {350,"mona" },
-            };
-            Helper.PrintCollection("sorted leader board" , leaderBoard );
-            Console.WriteLine();
-            Console.WriteLine($"first value {leaderBoard.First()}");
-            bool is500 = leaderBoard.ContainsKey(500);
-            Console.WriteLine();
-            Console.WriteLine("is there 500 ");
-            Console.WriteLine(is500);
-            var is999 = leaderBoard.TryGetValue(999 , out string leaderBoardString);
-            Console.WriteLine("999 :");
-            Console.WriteLine(is999);
-            Console.WriteLine();
-            leaderBoard.Remove(200);
-            Helper.PrintCollection("updated leader board", leaderBoard);*/
+            /*  SortedDictionary<int, string> leaderBoard = new SortedDictionary<int, string>()
+              {
+                  {500 ,"ahmed" },
+                  {200,"sara" },
+                  {800,"ali" },
+                  {350,"mona" },
+              };
+              Helper.PrintCollection("sorted leader board" , leaderBoard );
+              Console.WriteLine();
+              Console.WriteLine($"first value {leaderBoard.First()}");
+              bool is500 = leaderBoard.ContainsKey(500);
+              Console.WriteLine();
+              Console.WriteLine("is there 500 ");
+              Console.WriteLine(is500);
+              var is999 = leaderBoard.TryGetValue(999 , out string leaderBoardString);
+              Console.WriteLine("999 :");
+              Console.WriteLine(is999);
+              Console.WriteLine();
+              leaderBoard.Remove(200);
+              Helper.PrintCollection("updated leader board", leaderBoard);*/
 
+            #endregion
+            #region Exercise 3: Phone Book
+           /* Dictionary<string, string> phoneBook = new Dictionary<string, string>
+            {
+                { "Ahmed"  ,"010025646" },
+                { "youssef"  ,"010025647" },
+                { "mohamed"  ,"010025648" },
+                { "fares"  ,"010025649" },
+                
+            };
+            phoneBook["yassin"] = "0102154815";
+            Helper.PrintCollection("phone book" , phoneBook );
+            Console.WriteLine();
+
+            try
+            {
+                phoneBook.Add("Ahmed", "010025646");
+            }
+            catch (Exception ex) {
+                Console.WriteLine($"error : {ex.Message}");
+            }
+            Console.WriteLine();
+            Console.WriteLine("is duplicte added:");
+
+           bool isAdded =  phoneBook.TryAdd("Ahmed", "010025646");
+            Console.WriteLine(isAdded);
+
+            bool isThere = phoneBook.ContainsKey("mariam");
+            Console.WriteLine();
+            Console.WriteLine($"is this contact there: {isThere}");
+            string search = phoneBook.GetValueOrDefault("yasser" , "not found");
+            Console.WriteLine(search);
+
+            Console.WriteLine();
+            Console.WriteLine("Keys: " + string.Join(", ", phoneBook.Keys));
+            Console.WriteLine("Values: " + string.Join(", ", phoneBook.Values));*/
             #endregion
         }
     }
