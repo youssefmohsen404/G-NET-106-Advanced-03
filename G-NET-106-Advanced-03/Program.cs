@@ -125,26 +125,50 @@
             #endregion
             #region Exercise 5: Print Queue Simulator
             //fifo
-           /* Queue<string> document = new Queue<string>();
-            document.Enqueue("Report.pdf");
-            document.Enqueue("Invoice.pdf");
-            document.Enqueue("Letter.docx");
-            document.Enqueue("Resume.pdf");
-            document.Enqueue("Photo.jpg");
+            /* Queue<string> document = new Queue<string>();
+             document.Enqueue("Report.pdf");
+             document.Enqueue("Invoice.pdf");
+             document.Enqueue("Letter.docx");
+             document.Enqueue("Resume.pdf");
+             document.Enqueue("Photo.jpg");
 
-            Helper.PrintCollection("documents" , document);
-            Console.WriteLine("count");
-             Console.WriteLine(document.Count());
-            Console.WriteLine("first printed document");
-            Console.WriteLine(document.Peek());
+             Helper.PrintCollection("documents" , document);
+             Console.WriteLine("count");
+              Console.WriteLine(document.Count());
+             Console.WriteLine("first printed document");
+             Console.WriteLine(document.Peek());
+             Console.WriteLine();
+             Console.WriteLine($"Printing : {document.Dequeue()}");
+             Console.WriteLine($"Printing : {document.Dequeue()}");
+             Console.WriteLine($"Printing : {document.Dequeue()}");
+             Console.WriteLine($"Printing : {document.Dequeue()}");
+             Console.WriteLine($"Printing : {document.Dequeue()}");
+             bool isDequeued = document.TryDequeue(out string dequeItem);
+             Console.WriteLine(isDequeued);*/
+            #endregion
+            #region Exercise 6: Browser History (Undo)
+
+            Stack<string> text = new Stack<string>();
+            //lifo
+            text.Push("google.com");
+            text.Push("github.com");
+            text.Push("stackoverflow.com");
+            text.Push("youtube.com");
+            text.Push("claude.ai");
+
+            Console.WriteLine($"top item in stack : {text.Peek()}");
             Console.WriteLine();
-            Console.WriteLine($"Printing : {document.Dequeue()}");
-            Console.WriteLine($"Printing : {document.Dequeue()}");
-            Console.WriteLine($"Printing : {document.Dequeue()}");
-            Console.WriteLine($"Printing : {document.Dequeue()}");
-            Console.WriteLine($"Printing : {document.Dequeue()}");
-            bool isDequeued = document.TryDequeue(out string dequeItem);
-            Console.WriteLine(isDequeued);*/
+            Console.WriteLine(text.Pop());
+            Console.WriteLine(text.Pop());
+            Console.WriteLine(text.Pop());
+
+            Helper.PrintCollection("page ", text);
+            text.Pop();
+            text.Pop();
+            var isStacked = text.TryPop(out var result);
+            Console.WriteLine("empty ");
+            Console.WriteLine(isStacked);
+
             #endregion
         }
     }
