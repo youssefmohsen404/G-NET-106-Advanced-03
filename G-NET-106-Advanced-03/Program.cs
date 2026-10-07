@@ -90,38 +90,61 @@
             #endregion
             #region Exercise 4: Unique Email Validator
 
-       /*     HashSet<string> emails = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
-            {
-            };
-            Console.WriteLine($"Add ahmed@test.com: {emails.Add("ahmed@test.com")}");
-            Console.WriteLine($"Add AHMED@test.com: {emails.Add("AHMED@test.com")}");
-            Console.WriteLine($"Add sara@test.com:  {emails.Add("sara@test.com")}");
-            Console.WriteLine($"Add Sara@Test.Com:  {emails.Add("Sara@Test.Com")}");
-            Helper.PrintCollection("emails" , emails );
-            int count =  emails.Count();
-            Console.WriteLine($"count :{count}");
-            // count equals 2 because there is no duplications in hash sets and w created a case sensitive hashset
-            // so ahmed is like AHMED so it is a duplicated item
+            /*     HashSet<string> emails = new HashSet<string>(StringComparer.OrdinalIgnoreCase)
+                 {
+                 };
+                 Console.WriteLine($"Add ahmed@test.com: {emails.Add("ahmed@test.com")}");
+                 Console.WriteLine($"Add AHMED@test.com: {emails.Add("AHMED@test.com")}");
+                 Console.WriteLine($"Add sara@test.com:  {emails.Add("sara@test.com")}");
+                 Console.WriteLine($"Add Sara@Test.Com:  {emails.Add("Sara@Test.Com")}");
+                 Helper.PrintCollection("emails" , emails );
+                 int count =  emails.Count();
+                 Console.WriteLine($"count :{count}");
+                 // count equals 2 because there is no duplications in hash sets and w created a case sensitive hashset
+                 // so ahmed is like AHMED so it is a duplicated item
 
-            HashSet<int> setA = new HashSet<int> { 1, 2, 3, 4, 5 };
-            HashSet<int> setB = new HashSet<int> { 4, 5, 6, 7, 8 };
+                 HashSet<int> setA = new HashSet<int> { 1, 2, 3, 4, 5 };
+                 HashSet<int> setB = new HashSet<int> { 4, 5, 6, 7, 8 };
 
-            HashSet<int> union = new HashSet<int>(setA);
-            union.UnionWith(setB);
-            Helper.PrintCollection("union" , union );
-
-
-            HashSet<int> intersect = new HashSet<int>(setA);
-            intersect.IntersectWith(setB);
-            Helper.PrintCollection("intersect" , intersect );
+                 HashSet<int> union = new HashSet<int>(setA);
+                 union.UnionWith(setB);
+                 Helper.PrintCollection("union" , union );
 
 
-            HashSet<int> except = new HashSet<int>(setA);
-            except.ExceptWith(setB);
-            Helper.PrintCollection("except" ,  except );
+                 HashSet<int> intersect = new HashSet<int>(setA);
+                 intersect.IntersectWith(setB);
+                 Helper.PrintCollection("intersect" , intersect );
 
-            HashSet<int> small = new HashSet<int> { 1, 2 };
-            Console.WriteLine($"{{1,2}} is a subset of A: {small.IsSubsetOf(setA)}");*/
+
+                 HashSet<int> except = new HashSet<int>(setA);
+                 except.ExceptWith(setB);
+                 Helper.PrintCollection("except" ,  except );
+
+                 HashSet<int> small = new HashSet<int> { 1, 2 };
+                 Console.WriteLine($"{{1,2}} is a subset of A: {small.IsSubsetOf(setA)}");*/
+            #endregion
+            #region Exercise 5: Print Queue Simulator
+            //fifo
+           /* Queue<string> document = new Queue<string>();
+            document.Enqueue("Report.pdf");
+            document.Enqueue("Invoice.pdf");
+            document.Enqueue("Letter.docx");
+            document.Enqueue("Resume.pdf");
+            document.Enqueue("Photo.jpg");
+
+            Helper.PrintCollection("documents" , document);
+            Console.WriteLine("count");
+             Console.WriteLine(document.Count());
+            Console.WriteLine("first printed document");
+            Console.WriteLine(document.Peek());
+            Console.WriteLine();
+            Console.WriteLine($"Printing : {document.Dequeue()}");
+            Console.WriteLine($"Printing : {document.Dequeue()}");
+            Console.WriteLine($"Printing : {document.Dequeue()}");
+            Console.WriteLine($"Printing : {document.Dequeue()}");
+            Console.WriteLine($"Printing : {document.Dequeue()}");
+            bool isDequeued = document.TryDequeue(out string dequeItem);
+            Console.WriteLine(isDequeued);*/
             #endregion
         }
     }
